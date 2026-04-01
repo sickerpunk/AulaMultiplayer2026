@@ -35,7 +35,7 @@ public class MovimentoController : NetworkBehaviour
                 transform.Translate(transform.forward * vertical * velocidade * Runner.DeltaTime);
                 //rotação do personagem
                 float velocidadeRotacao = velocidade * 50f;
-                transform.Rotate(new Vector3(0, horizontal * velocidade * Runner.DeltaTime, 0));
+                transform.Rotate(new Vector3(0, horizontal * velocidadeRotacao * Runner.DeltaTime, 0));
                 #endregion 
                 
                 //animação do personagem
