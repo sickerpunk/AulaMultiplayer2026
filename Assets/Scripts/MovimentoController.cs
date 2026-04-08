@@ -47,4 +47,13 @@ public class MovimentoController : NetworkBehaviour
             }
         }
     }
+    [Networked] public int Score { get; set; }
+
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    public void RPC_AddScore(int points)
+    {
+        Score += points;
+    }
+
+
 }
